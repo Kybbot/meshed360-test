@@ -1,0 +1,222 @@
+.customTableSelect__wrapper {
+	height: 100%;
+	position: relative;
+}
+
+.customTableSelect__container {
+	height: inherit;
+}
+
+/* Triger */
+.customTableSelect__trigger {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+	text-align: left;
+	cursor: pointer;
+	pointer-events: auto;
+
+	width: 100%;
+	outline: none;
+	height: inherit;
+	padding: 12px 10px;
+	transition: border 0.2s ease;
+	border: 1px solid transparent;
+	background-color: var(--bg-white);
+}
+
+.customTableSelect__trigger:disabled {
+	cursor: not-allowed;
+}
+
+.customTableSelect__trigger[data-state="open"] {
+	border: 1px solid var(--border-focus);
+}
+
+.customTableSelect__trigger--input {
+	gap: 0;
+	padding: 0;
+	padding-right: 10px;
+}
+
+.customTableSelect__trigger--error {
+	border: 1px solid var(--border-error);
+}
+
+.customTableSelect__trigger--error > span:nth-child(1) {
+	color: var(--text-error);
+}
+
+/* Placeholder */
+.customTableSelect__placeholder {
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+
+	position: absolute;
+	transition: all 120ms ease-in;
+	background-color: var(--bg-white);
+}
+
+.customTableSelect__placeholder--active {
+	display: none;
+}
+
+.customTableSelect__trigger--error > .customTableSelect__placeholder {
+	color: var(--text-error);
+}
+
+/* Icon */
+.customTableSelect__icon {
+	width: 18px;
+	height: 18px;
+	color: #7e84a3;
+}
+
+.customTableSelect__icon > svg {
+	width: 18px;
+	height: 18px;
+}
+
+.customTableSelect__trigger:disabled .customTableSelect__icon {
+	opacity: 0.2;
+}
+
+.customTableSelect__trigger[data-state="open"] > .customTableSelect__icon {
+	transform: rotate(180deg);
+}
+
+.customTableSelect__trigger:disabled.customTableSelect__trigger--loading .customTableSelect__icon {
+	opacity: 1;
+}
+
+/* Error */
+.customTableSelect__error {
+	position: absolute;
+	left: 4px;
+	bottom: 2px;
+
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 11px;
+	pointer-events: none;
+	color: var(--text-error);
+	margin: 0;
+}
+
+/* Content */
+.customTableSelect__content {
+	position: absolute;
+	left: 0;
+	top: var(--customSelect-top, 100%);
+
+	display: none;
+	width: 100%;
+	/* z-index: 4; */
+	overflow: hidden;
+	max-height: 375px;
+	scrollbar-width: none;
+	background-color: var(--bg-white);
+	box-shadow: 0px 6px 24px 0px #262c4729;
+}
+
+.customTableSelect__content--open {
+	display: block;
+	pointer-events: auto;
+}
+
+.customTableSelect__items {
+	overflow-y: auto;
+	max-height: 310px;
+	scrollbar-width: none;
+	overscroll-behavior: contain;
+}
+
+.customTableSelect__header {
+	padding: 10px 16px;
+}
+
+.customTableSelect__form {
+	position: relative;
+}
+
+.customTableSelect__header > .customTableSelect__form {
+	width: 100%;
+}
+
+/* Item */
+.customTableSelect__item {
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+	text-align: left;
+	word-break: break-all;
+
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 10px 16px;
+	user-select: none;
+	border: 1px solid transparent;
+	background-color: transparent;
+	transition: all 0.2s ease-in;
+}
+
+.customTableSelect__item:hover {
+	outline: none;
+	cursor: pointer;
+	color: #1e5eff;
+	background-color: #ecf2ff;
+}
+
+.customTableSelect__item:disabled {
+	cursor: not-allowed;
+	color: #5a607f;
+	background-color: transparent;
+}
+
+.customTableSelect__item--selected:disabled {
+	cursor: not-allowed;
+	color: #1e5eff;
+	background-color: #ecf2ff;
+}
+
+.customTableSelect__item--selected {
+	outline: none;
+	cursor: pointer;
+	color: #1e5eff;
+	background-color: #ecf2ff;
+}
+
+.customTableSelect__item[data-disabled] {
+	cursor: not-allowed;
+	color: #5a607f;
+	background-color: transparent;
+}
+
+.customTableSelect__item[data-state="checked"] {
+	outline: none;
+	cursor: pointer;
+	color: #1e5eff;
+	background-color: #ecf2ff;
+}
+
+.customTableSelect__item[data-highlighted] {
+	outline: none;
+	cursor: pointer;
+	color: #1e5eff;
+	background-color: #ecf2ff;
+}

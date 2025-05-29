@@ -1,0 +1,83 @@
+.tableInput {
+	position: relative;
+	height: 100%;
+}
+
+.tableInput__field {
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+
+	width: 100%;
+	height: 100%;
+	outline: none;
+	padding: 12px 10px;
+	border: 1px solid transparent;
+	transition: border 120ms ease-in;
+	background-color: var(--bg-white);
+}
+
+.tableInput__field::placeholder {
+	opacity: 1;
+	color: #5a607f;
+}
+
+.tableInput__field:-webkit-autofill,
+.tableInput__field:-webkit-autofill:hover,
+.tableInput__field:-webkit-autofill:focus,
+.tableInput__field:-webkit-autofill:active {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #5a607f;
+}
+
+.tableInput__field:disabled {
+	cursor: not-allowed;
+}
+
+.tableInput__field:focus {
+	outline: none;
+}
+
+.tableInput__field:focus-visible {
+	border: 1px solid var(--border-focus);
+}
+
+.tableInput__field--upperCase {
+	text-transform: uppercase;
+}
+
+.tableInput__field--noBorder {
+	border: none !important;
+}
+
+.tableInput--error > .tableInput__field {
+	color: var(--text-error);
+	border: 1px solid var(--border-error);
+}
+
+.tableInput__field--error.tableInput__field::placeholder {
+	color: var(--text-error);
+}
+
+.tableInput__label {
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--text-label);
+}
+
+.tableInput__error {
+	position: absolute;
+	left: 4px;
+	bottom: 2px;
+
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 11px;
+	pointer-events: none;
+	color: var(--text-error);
+	margin: 0;
+}

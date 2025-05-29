@@ -1,0 +1,81 @@
+.commonDialog__header {
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e6e9f4;
+}
+
+.commonDialog__header--complex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.commonDialog__title {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+
+	margin: 0;
+	padding: 6px 0;
+}
+
+.commonDialog__form {
+	display: grid;
+	gap: 16px;
+}
+
+.commonDialog__row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.commonDialog__row--small {
+	grid-template-columns: 110px 1fr;
+	gap: 12px;
+}
+
+.commonDialog__row--2columns {
+	grid-column: 1 / 3;
+}
+
+.commonDialog__form--2columns {
+	row-gap: 16px;
+	column-gap: 24px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.commonDialog__btns {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 16px;
+}
+
+.commonDialog__btns--2columns {
+	grid-column: 1 / 3;
+}
+.commonDialog__cell {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 100%;
+	letter-spacing: 0px;
+	line-height: 120%;
+}
+
+.cell-header {
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: 0px;
+	color: #131523;
+}
+.cell-label {
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 12px;
+	color: #5a607f;
+}

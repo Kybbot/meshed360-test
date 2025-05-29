@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meshed Testing</title>
+  <link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css" />
+</head>
+
+<body>
+  <br />
+  <!DOCTYPE html>
+  <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; " />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Gloria+Hallelujah&family=Inter+Tight:wght@600&family=Lato:wght@700&family=Nunito:wght@600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <title>Meshed Testing</title>
+
+    <style>
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Inter',
+          'Nutino', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+          'Segoe UI Emoji', 'Segoe UI Symbol', 'Gloria Hallelujah', cursive;
+      }
+
+      .body {
+        margin: 0 auto !important;
+        background-color: #f2f3f4 !important;
+      }
+
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      div,
+      p,
+      a,
+      li,
+      td {
+        -webkit-text-size-adjust: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      div[style*='margin: 16px 0'] {
+        margin: 0 !important;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+
+      table table table {
+        table-layout: auto;
+      }
+
+      table,
+      td {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      *[x-apple-data-detectors],
+      .unstyle-auto-detected-links *,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      .im {
+        color: inherit !important;
+      }
+
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+
+      img.g-img+div {
+        display: none !important;
+      }
+    </style>
+
+    <style>
+      .button-td,
+      .button-a {
+        background: #007ace;
+      }
+
+      button:hover {
+        background: #3a8cc5;
+      }
+
+      .view-link {
+        display: block;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 200%;
+        color: #ffffff;
+        text-align: center;
+        background: #007ace;
+        padding: 5px;
+        margin: 20px 0;
+        border-radius: 2px;
+      }
+
+      .text {
+        display: block;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: #0c1629;
+        padding: 10px 0;
+        margin: 0;
+      }
+
+      .text-right {
+        display: block;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: #000000;
+        padding: 10px 0;
+        text-align: right;
+        margin: 0;
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+
+      .show-on-responsive {
+        display: none !important;
+      }
+
+
+      @media screen and (max-width: 767px) {
+        .email-container {
+          width: 100% !important;
+          margin: auto !important;
+        }
+
+        .padding-container {
+          padding: 0px 16px 0px 16px !important;
+          mso-padding-alt: 0px 16px 0px 16px !important;
+        }
+
+        *[class].mobile {
+          width: 100% !important;
+        }
+
+        .fluid {
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+        }
+
+        .stack-column-center {
+          text-align: center !important;
+        }
+
+        .stack-column-center h2,
+        .stack-column-center p {
+          text-align: center !important;
+        }
+
+        .center-on-narrow {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
+        }
+
+        table.center-on-narrow {
+          display: inline-block !important;
+        }
+
+        .button-a {
+          font-size: 16px !important;
+          line-height: 1 !important;
+        }
+
+        u+.body {
+          min-width: 100vw !important;
+          margin: 0 auto !important;
+        }
+
+        table td p {
+          color: #050505 !important;
+          border-color: #ffffff !important;
+          background-color: #ffffff !important;
+        }
+
+        u+.body .gmail-blend-screen {
+          background: #f2f3f4;
+          mix-blend-mode: screen;
+        }
+
+        u+.body .gmail-blend-difference {
+          background: #f2f3f4;
+          mix-blend-mode: difference;
+        }
+
+        .social-networks {
+          max-width: 232px !important;
+        }
+
+        .inline-on-responsive {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        .hide-on-responsive {
+          display: none !important;
+        }
+
+        .show-on-responsive {
+          display: block !important;
+        }
+
+        .full-center-responsive-logo {
+          width: 100%;
+        }
+
+        .full-center-responsive-logo img {
+          margin: 0 auto;
+        }
+
+        .mobile-padding-fix {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+          padding-top: 16px !important;
+          padding-bottom: 16px !important;
+        }
+
+        .mobile-pt-0 {
+          padding-top: 0 !important;
+        }
+
+        .mobile-pt-16 {
+          padding-top: 16px !important;
+        }
+
+        .mobile-pt-32 {
+          padding-top: 32px !important;
+        }
+
+        .mobile-pb-0 {
+          padding-bottom: 0 !important;
+        }
+
+        .mobile-pb-16 {
+          padding-bottom: 16px !important;
+        }
+
+        .mobile-pb-32 {
+          padding-bottom: 32px !important;
+        }
+
+        .mobile-pl-0 {
+          padding-left: 0 !important;
+        }
+
+        .mobile-pl-16 {
+          padding-left: 16px !important;
+        }
+
+        .mobile-pl-32 {
+          padding-left: 32px !important;
+        }
+
+        .mobile-pr-0 {
+          padding-right: 0 !important;
+        }
+
+        .mobile-pr-16 {
+          padding-right: 16px !important;
+        }
+
+        .mobile-pr-32 {
+          padding-top: 32px !important;
+        }
+
+        .g-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+
+      @media screen and (max-width: 525px) {
+        .mobile-hidden {
+          display: none !important;
+        }
+
+        .mobile-header-fix {
+          font-size: 30px !important;
+          line-height: 40px !important;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        img.enterprise {
+          height: 23px !important;
+        }
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 374px) {
+        u+.body {
+          min-width: 320px !important;
+          margin: 0 auto !important;
+        }
+
+        .mobile-header-fix {
+          font-size: 22px !important;
+          line-height: 32px !important;
+        }
+      }
+
+      @media only screen and (min-width: 375px) and (max-width: 413px) {
+        u+.body {
+          min-width: 375px !important;
+          margin: 0 auto !important;
+        }
+
+        .mobile-header-fix {
+          font-size: 26px !important;
+          line-height: 36px !important;
+        }
+      }
+
+      @media only screen and (min-width: 414px) {
+        u+.body {
+          min-width: 414px !important;
+          margin: 0 auto !important;
+        }
+
+        @media only screen and (min-width: 526px) and (max-width: 600px) {
+          .mobile-header-fix {
+            font-size: 36px !important;
+            line-height: 46px !important;
+          }
+        }
+      }
+
+      @media only screen and (min-width: 375px) and (max-width: 413px) {
+        u+.body {
+          min-width: 375px !important;
+          width: 375px !important;
+          margin: 0 auto !important;
+        }
+      }
+
+      #MessageViewBody,
+      #MessageWebViewDiv {
+        width: 100% !important;
+        margin: 0 auto !important;
+      }
+    </style>
+    <style>
+      @media (prefers-color-scheme: light) {
+
+        h1,
+        h2,
+        h3,
+        p,
+        td,
+        .form-head {
+          color: #050505 !important;
+        }
+
+        h1>a {
+          color: #050505 !important;
+        }
+
+        .body-bg {
+          background-color: #f2f3f4 !important;
+        }
+
+        .content-bg {
+          background-color: #fff !important;
+        }
+
+        .email-container {
+          color: #000000;
+          padding: 20px;
+        }
+
+        .light-img {
+          display: block !important;
+          overflow: visible !important;
+          float: none !important;
+          max-height: inherit !important;
+          max-width: inherit !important;
+          line-height: auto !important;
+          margin-top: 0px !important;
+          visibility: inherit !important;
+        }
+
+        .dark-img {
+          display: none;
+          display: none !important;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .light-img {
+          display: block !important;
+          overflow: visible !important;
+          float: none !important;
+          max-height: inherit !important;
+          max-width: inherit !important;
+          line-height: auto !important;
+          margin-top: 0px !important;
+          visibility: inherit !important;
+        }
+
+        .dark-img {
+          display: none;
+          display: none !important;
+        }
+      }
+
+      [data-ogsc] .dark-img {
+        display: block !important;
+        overflow: visible !important;
+        float: none !important;
+        max-height: inherit !important;
+        max-width: inherit !important;
+        line-height: auto !important;
+        margin-top: 0px !important;
+        visibility: inherit !important;
+      }
+
+      [data-ogsc] .light-img {
+        display: none;
+        display: none !important;
+      }
+    </style>
+
+    <style>
+      @media (prefers-color-scheme: dark) {
+
+        p a,
+        span.orderlist {
+          color: #000 !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        center {
+          padding: 0 !important;
+        }
+
+        .header-block {
+          padding: 10px 0 !important;
+        }
+
+        .tr-socials td {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          margin: 16px 0px;
+        }
+
+        .tr-socials td a {
+          margin: 0 12px !important;
+        }
+
+        .logo-image {
+          max-width: 40px !important;
+        }
+      }
+
+      @media screen and (min-width: 563px) {
+        .salesforce-hidden {
+          display: none !important;
+        }
+      }
+
+      @media screen and (max-width: 563px) {
+        .salesforce-show {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body width="100%" style="
+          width: 100%;
+          margin: 0 auto !important;
+          padding: 30px 0 !important;
+          mso-line-height-rule: exactly;
+          background-color: #f2f3f4;
+        " class="body body-bg">
+    <center style="
+            width: 100%;
+            margin: 0 auto !important;
+            background-color: #f2f3f4;
+            max-width: 692px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            color: #f2f3f4;
+          " class="body-bg">
+
+      <span style="
+              display: none;
+              font-size: 1px;
+              line-height: 1px;
+              max-height: 0;
+              max-width: 0;
+              opacity: 0;
+              overflow: hidden;
+              mso-hide: all;
+              font-family: 'Roboto', sans-serif;
+            ">
+        Meshed Testing
+      </span>
+      <span style="
+              display: none;
+              font-size: 1px;
+              line-height: 1px;
+              max-height: 0;
+              max-width: 0;
+              opacity: 0;
+              overflow: hidden;
+              mso-hide: all;
+              font-family: 'Roboto', sans-serif;
+            ">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      </span>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="650"
+        style="width: 650px; margin: 0 auto; text-align: center" class="email-container body-bg">
+        <tbody style="padding: 0 16px">
+          <tr>
+            <td align="center" valign="top">
+              <table align="center" role="presentation" align="center" border="0" cellpadding="0" cellspacing="0"
+                class="email-container" style="width: 650px; margin: 0 auto" width="650">
+                <tbody>
+                  <tr>
+                    <td align="center" width="100%" style="margin: 0 auto; width: 100%" class="mobile-padding-fix">
+                      <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+                        class="email-container content-bg" role="presentation" style="width: 650px; margin: 0 auto"
+                        width="650">
+                        <tbody>
+                          <tr>
+                            <td style="
+                                    padding: 40px;
+                                  ">
+                              <table role="presentation" style="width: 100%" width="100%" cellspacing="0"
+                                cellpadding="0" border="0">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <p style="
+                                      font-size: 25px;
+                                      font-style: normal;
+                                      font-weight: 800;
+                                      line-height: 160%;
+                                      color: #657482;
+                                      text-align: center;
+                                      margin: 0;                                      
+                                      margin-bottom: 18px;
+                                      line-height: 1;
+                                    ">
+                                        Meshed Testing
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p style="
+                                         font-size: 35px;
+                                        font-style: normal;
+                                        line-height: 1;
+                                        font-weight: 800;
+                                        color: #000000;
+                                        text-align: center;
+                                        margin: 0;
+                                    ">
+                                        R575.00 <span style="
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 800;                              
+                                        color: #000000;
+                                        text-align: center;
+                                        ">ZAR</span>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p style="
+                                      font-size: 18px;
+                                      font-style: normal;
+                                      font-weight: 800;
+                                      line-height: 1;
+                                      color: #000000;
+                                      text-align: center;
+                                      margin: 10px
+                                    ">
+                                        Due 3 Apr 2025
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p style="
+                                      font-size: 15px;
+                                      font-style: normal;
+                                      font-weight: 500;
+                                      line-height: 1;
+                                      color: #000000;
+                                      text-align: center;
+                                      margin: 0px;
+                                    ">
+                                        Invoice #:INV-0108
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p class="text" style="margin-top: 30px;">
+                                        Hi Big,
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p class="text">
+                                        Here's invoice INV-0108 for ZAR 575.00.
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p class="text">
+                                        The amount outstanding of ZAR 575.00 is due on 03 Apr 2025.
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p class="text">
+                                        If you have any questions, please let us know.
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p class="text" style="margin-bottom: 30px;">
+                                        Thanks, <br>Meshed Testing
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <table style="width: 100%; margin-top: 40px;">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p class="text bold">
+                                                Description
+                                              </p>
+                                            </td>
+                                            <td>
+                                              <p class="text-right bold">
+                                                Amount
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <table
+                                        style="width: 100%; border-top: 1px solid grey; border-bottom: 1px solid grey;">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p class="text">
+                                                JDC - Inhouse MTB Wheel
+                                              </p>
+                                            </td>
+                                            <td>
+                                              <p class="text-right">
+                                                500.00
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <table style="width: 100%;">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p class="text bold">
+                                                Subtotal
+                                              </p>
+                                            </td>
+                                            <td>
+                                              <p class="text-right bold">
+                                                500.00
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <table style="width: 100%;">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p class="text">
+                                                Total VAT
+                                              </p>
+                                            </td>
+                                            <td>
+                                              <p class="text-right">
+                                                75.00
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <table style="width: 100%;">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p class="text">
+                                                Amount Paid
+                                              </p>
+                                            </td>
+                                            <td>
+                                              <p class="text-right">
+                                                0.00
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <table
+                                        style="width: 100%; border-top: 1px solid grey; border-bottom: 1px solid grey;">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p class="text bold" style="font-size: 18px;">
+                                                Amount Due
+                                              </p>
+                                            </td>
+                                            <td>
+                                              <p class="text-right bold" style="font-size: 18px;">
+                                                <span style="font-weight: 500; font-size: 19px;">ZAR </span>575.00
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                            </td>
+                          </tr>
+
+                          <tr style="
+                                  display: block;
+                                  padding: 32px;
+                                  text-align: center;
+                                  background: #f2f3f4;
+                                ">
+                            <td style="
+                                    display: inline-block;
+                                    max-width: 420px;
+                                    text-align: center;
+                                    ">
+                              <a href=" https://dev-meshed.oleksiilambdateam.uk" style="
+                               display: inline-block;
+                               outline: none;
+                               text-decoration: none;
+                               text-align: center;
+                               color: #1c1c1c;
+                               font-size: 16px;
+                               font-weight: 600;
+                             " target="_blank">
+                                <span
+                                  style="display: inline-table; vertical-align: middle; padding: 0; margin: 0;">Powered
+                                  by</span>
+                                <img src="https://pub-5e5fa84c95c1488e8ccadb29fc957f39.r2.dev/footerLogo.png"
+                                  style="max-width: 130px; display: inline-table; vertical-align: middle; width: 130px;"
+                                  class="logo-image" border="0" alt="Xero Logo" />
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+
+  </html>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+@import "./auth/loginForm.css";
+
+@import "./page/header.css";
+@import "./page/footer.css";
+@import "./page/emptyPage.css";
+@import "./page/navigation.css";
+@import "./page/navigationDetails.css";
+
+@import "./dialogs/infoDialog.css";
+@import "./dialogs/commonDialog.css";
+
+@import "./search/search.css";
+@import "./import/import.css";
+@import "./totalTable/totalTable.css";
+@import "./layoutOptions/layoutOptions.css";

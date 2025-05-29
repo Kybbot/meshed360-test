@@ -1,0 +1,130 @@
+.salesOrder__fulfilment-left-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #e6e9f4;
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+}
+
+.salesOrder__fulfilment-left-header button {
+	background: none;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.salesOrder__fulfilment-left-container {
+	display: flex;
+	flex-direction: column;
+	min-width: 288px;
+	flex-shrink: 0;
+}
+
+.salesOrder__fulfilment-right-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.salesOrder__fulfilment-right-header {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+	justify-content: center;
+	border-bottom: 1px solid #e6e9f4;
+}
+
+.salesOrder__fulfilment-picking-fields {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	gap: 12px;
+	margin-bottom: -17px;
+	border-top: 1px solid #e6e9f4;
+	padding-top: 16px;
+}
+
+.salesOrder__fulfilment-list-container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+
+.salesOrder__fulfilment-list-card {
+	cursor: pointer;
+}
+
+.salesOrder__fulfilment-list-card-heading {
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+	color: #5a607f;
+	justify-content: space-between;
+}
+
+.salesOrder__fulfilment-list-card-heading-active {
+	color: #1e5eff;
+}
+
+.salesOrder__invoicing-list-card-heading {
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	color: #5a607f;
+}
+
+.salesOrder__invoicing-list-card-heading-indicator {
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+}
+
+.salesOrder__invoicing-list-card-heading-active {
+	color: #1e5eff;
+}
+
+.salesOrder__invoicing-list-card {
+	cursor: pointer;
+	border-bottom: 1px solid #e6e9f4;
+	gap: 6px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+	padding-bottom: 10px;
+}
+
+.salesOrder__invoicing-fields {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 100%;
+	gap: 12px;
+	margin-bottom: -17px;
+	border-top: 1px solid #e6e9f4;
+	padding-top: 16px;
+}
+
+.salesOrder__creditNotes-fields {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
+	gap: 12px;
+	margin-bottom: -17px;
+	border-top: 1px solid #e6e9f4;
+	padding-top: 16px;
+}

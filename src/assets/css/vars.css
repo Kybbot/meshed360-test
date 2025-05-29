@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	interpolate-size: allow-keywords;
+
+	--bg-main: #f4f6f9;
+	--bg-white: #ffffff;
+
+	--bg-nav: #333752;
+	--bg-nav-active: #f5f6fa;
+
+	--text-main: #131523;
+	--text-white: #ffffff;
+	--text-error: #f12b43;
+
+	--text-header: #212529;
+
+	--text-nav-main: #eaecf5;
+	--text-nav-active: #5a607f;
+	--text-nav-secondary: #a1a7c4;
+	--text-nav-secondary-active: #f5f6fa;
+
+	--text-label: #a1a7c4;
+	--text-input: #5a607f;
+	--text-placeholder: #a1a7c4;
+
+	--border-main: #d9e1ec;
+	--border-focus: #4f81ff;
+	--border-error: #f12b43;
+
+	--btn-hover: #4f81ff;
+	--btn-accent: #1e5eff;
+	--btn-disabled: #dcdcdc;
+}
+
+html,
+body {
+	height: 100%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 10px;
+}
+
+#root {
+	height: 100%;
+}
+
+#portal {
+	position: relative;
+	z-index: 3;
+}
+
+#portal2 {
+	position: relative;
+}
+
+button {
+	outline: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.button:focus {
+	outline: none;
+}
+
+button:focus-visible {
+	border: 1px solid var(--border-focus);
+}
+
+.srOnly {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.empty_list {
+	margin: 0;
+	color: #5a607f;
+}

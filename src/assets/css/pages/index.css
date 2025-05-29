@@ -1,0 +1,25 @@
+@import "./common/commonPage.css";
+
+@import "./dashboard/dashboard.css";
+@import "./dashboard/dashboardInfo.css";
+@import "./dashboard/dashboardStatistic.css";
+
+@import "./sales/customers/activeCustomers.css";
+@import "./sales/customers/archivedCustomers.css";
+@import "./sales/newCustomer/newCustomer.css";
+@import "./sales/salesOrder.css";
+
+@import "./purchaseOrder/purchaseOrder.css";
+
+@import "./settings/generalSettings/generalSettings.css";
+@import "./settings/defaultAccountMapping/defaultAccountMapping.css";
+@import "./settings/salesDefaults/salesDefaults.css";
+@import "./settings/documentTemplates/documentTemplate.css";
+@import "./settings/documentTemplates/templatesDetails.css";
+@import "./settings/documentTemplates/templatesSubDetails.css";
+
+@import "./integrations/integrations.css";
+
+@import "./inventory/stockControl/stockControl.css";
+
+@import "./reports/reports.css";

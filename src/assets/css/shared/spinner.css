@@ -1,0 +1,11 @@
+.spinner {
+	color: #1e5eff;
+	transform-origin: center;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

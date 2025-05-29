@@ -1,0 +1,10 @@
+.errorMessage {
+	font-size: 14px;
+	line-height: 22px;
+	color: var(--text-error);
+	margin: 0;
+}
+
+.errorMessage--topMargin {
+	margin: 10px 0 0 0;
+}

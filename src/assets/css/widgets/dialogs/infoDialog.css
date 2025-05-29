@@ -1,0 +1,47 @@
+.infoDialog {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.infoDialog__svg {
+	margin-bottom: 16px;
+}
+
+.infoDialog__title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 28px;
+	text-align: center;
+	margin: 0 0 16px 0;
+}
+
+.infoDialog__text {
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #5a607f;
+	margin: 0 0 33px 0;
+}
+
+.infoDialog__text--bold {
+	font-weight: 700;
+	display: inline-block;
+}
+
+.infoDialog__text--group {
+	margin: 0 0 15px 0;
+}
+
+.infoDialog__select {
+	width: 100%;
+	margin-bottom: 33px;
+}
+
+.infoDialog__btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}

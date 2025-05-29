@@ -1,0 +1,7 @@
+.activeCustomers__actions {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr auto auto auto auto;
+	gap: 16px;
+	margin-bottom: 16px;
+}

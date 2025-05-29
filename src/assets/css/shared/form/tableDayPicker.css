@@ -1,0 +1,248 @@
+.tableDayPicker {
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-style: none;
+	background-color: transparent;
+}
+
+.tableDayPicker:disabled {
+	cursor: not-allowed;
+}
+
+.tableDayPicker:focus {
+	border: none;
+}
+
+.tableDayPicker[data-state="open"] > .tableDayPicker__wrapper {
+	border: 1px solid var(--border-focus);
+}
+
+.tableDayPicker:focus-visible > .tableDayPicker__wrapper {
+	border: 1px solid var(--border-focus);
+}
+
+.tableDayPicker__wrapper {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+	text-align: left;
+
+	width: 100%;
+	height: 100%;
+	outline: none;
+	padding: 12px 10px;
+	border: 1px solid transparent;
+	transition: border 0.2s ease;
+	background-color: var(--bg-white);
+}
+
+.tableDayPicker--error > .tableDayPicker__wrapper {
+	color: var(--text-error);
+	border: 1px solid var(--border-error);
+}
+
+.tableDayPicker__placeholder {
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+
+	position: absolute;
+	transition: all 120ms ease-in;
+	background-color: var(--bg-white);
+}
+
+.tableDayPicker__placeholder--active {
+	display: none;
+}
+
+.tableDayPicker--error .tableDayPicker__placeholder {
+	color: var(--text-error);
+}
+
+.tableDayPicker__svg {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	transform: translateY(-50%);
+}
+
+.tableDayPicker__popover {
+	padding: 22px 22px 28px 22px;
+	box-shadow: 0px 6px 24px 0px #262c4729;
+}
+
+.tableDayPicker__error {
+	position: absolute;
+	left: 4px;
+	bottom: 2px;
+
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+	text-align: left;
+	color: var(--text-error);
+	margin: 0;
+}
+
+.tableDayPicker__dayPicker {
+	width: 318px;
+}
+
+.rdp-months {
+	width: 100%;
+	max-width: none;
+}
+
+.rdp-nav {
+	z-index: 2;
+	width: 100%;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rdp__arrow {
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+.rdp-month {
+	margin: 0 auto;
+}
+
+.rdp-month_caption {
+	height: 36px;
+	margin-bottom: 14px;
+}
+
+.rdp-caption_label {
+	display: inline-block;
+	width: 100%;
+
+	font-size: 16px;
+	font-weight: 700;
+	color: #131523;
+	line-height: 36px;
+	text-align: center;
+}
+
+.rdp-button_previous,
+.rdp-button_next {
+	color: #7e84a3;
+	width: 36px;
+	height: 36px;
+	border-radius: 4px;
+}
+
+.rdp-button_previous:hover,
+.rdp-button_next:hover {
+	color: #1e5eff;
+}
+
+.rdp-button_previous > svg {
+	transform: rotate(90deg);
+}
+
+.rdp-button_next > svg {
+	transform: rotate(270deg);
+}
+
+.rdp-month_grid {
+	width: 306px;
+}
+
+.rdp-weekdays {
+	display: grid;
+	gap: 2px;
+	grid-template-columns: repeat(7, 40px);
+}
+
+.rdp-weekday {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #a1a7c4;
+	opacity: 1;
+	text-align: center;
+	padding: 0 0 20px 0;
+}
+
+.rdp-week {
+	display: grid;
+	gap: 2px;
+	grid-template-columns: repeat(7, 40px);
+}
+
+.rdp-day {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 4px;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+.rdp-day:hover {
+	color: #1e5eff;
+	background-color: #ecf2ff;
+}
+
+.rdp-outside {
+	opacity: 1;
+	color: #a1a7c4;
+}
+
+.rdp-day_button {
+	background: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 38px;
+	height: 38px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+}
+
+.rdp-today:not(.rdp-outside) {
+	color: #ffffff;
+	border-radius: 4px;
+	background-color: #4f81ff;
+}
+
+.rdp-selected {
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 4px;
+	border: 2px solid #1e5eff;
+}

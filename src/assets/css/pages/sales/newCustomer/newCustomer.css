@@ -1,0 +1,13 @@
+.newCustomer__form {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 23px;
+}
+
+.newCustomer__comments {
+	grid-column: 1 / 4;
+}
+
+.newCustomer__error {
+	grid-column: 1 / 4;
+}

@@ -1,0 +1,48 @@
+.main {
+	height: 100%;
+	position: relative;
+}
+
+.main__error {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.main__content {
+	height: 100%;
+	position: relative;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	gap: 36px;
+	padding-left: var(--navigation-width, 80px);
+}
+
+.main__content--error {
+	padding-left: 0;
+}
+
+.main__trigger {
+	position: absolute;
+	top: 58px;
+	left: 80px;
+	width: 10px;
+	height: 2px;
+}
+
+.main__outlet {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 36px;
+}
+
+.main__sections {
+	display: grid;
+	gap: 18px;
+}
+
+.main__container {
+	width: 100%;
+}

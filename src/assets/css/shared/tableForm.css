@@ -1,0 +1,228 @@
+.tableForm {
+	overflow: hidden;
+}
+
+.tableForm__title {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #131523;
+	padding: 6px 0;
+	margin: 0 0 16px 0;
+}
+
+.tableForm__info {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #1e5eff;
+	text-align: center;
+
+	padding: 12px 0;
+	margin: 0 0 20px 0;
+	background-color: #d9e4ff;
+}
+
+.tableForm__info--bold {
+	font-weight: 700;
+}
+
+.tableForm__wrapper {
+	position: relative;
+	background-color: var(--bg-white);
+}
+
+.tableForm__overflow {
+	overflow-x: auto;
+	margin-bottom: 16px;
+	scroll-behavior: smooth;
+	border-bottom: 1px solid #e6e9f4;
+}
+
+/* TABLE */
+.tableForm__main {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	background-color: var(--bg-white);
+}
+
+.tableForm__thead {
+	position: relative;
+}
+
+.tableForm__tr {
+	height: 100%;
+}
+
+/* TH */
+.tableForm__th {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+	text-align: left;
+	white-space: nowrap;
+
+	min-width: 90px;
+	position: relative;
+	padding: 12px 10px;
+	background-color: #f5f6fa;
+	border-left: 1px solid #f5f6fa;
+}
+
+.tableForm__th:last-child {
+	border-right: 1px solid #f5f6fa;
+}
+
+.tableForm__th--right {
+	text-align: right;
+}
+
+.tableForm__th--actions {
+	width: 60px;
+	min-width: 60px;
+	max-width: 60px;
+	text-align: center;
+}
+
+.tableForm__th--footer {
+	font-weight: 700;
+	background-color: transparent;
+	border-left: 1px solid #e6e9f4;
+}
+
+.tableForm__th.tableForm__th--footer:last-child {
+	border-right: 1px solid #e6e9f4;
+}
+
+/* TD */
+.tableForm__td {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #5a607f;
+	text-align: left;
+	text-transform: capitalize;
+
+	padding: 0;
+	height: 100%;
+	position: relative;
+	border-left: 1px solid #e6e9f4;
+}
+
+.tableForm__td:last-child {
+	border-right: 1px solid #e6e9f4;
+}
+
+.tableForm__td--wrapper {
+	height: 100%;
+	padding: 12px 10px;
+	border: 1px solid transparent;
+}
+
+.tableForm__td--error > .tableForm__td--wrapper {
+	color: var(--text-error);
+	border: 1px solid var(--border-error);
+}
+
+.tableForm__td--right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.tableForm__td--empty {
+	text-align: center;
+}
+
+.tableForm__td--center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tableForm__td--text {
+	margin: 0;
+	height: 100%;
+	padding: 12px 10px;
+
+	display: flex;
+	align-items: center;
+	border: 1px solid transparent;
+}
+
+.tableForm__td--uncapitalize {
+	text-transform: none;
+}
+
+.tableForm__td--error > .tableForm__td--text {
+	color: var(--text-error);
+	border: 1px solid var(--border-error);
+}
+
+.tableForm__td--alert {
+	position: absolute;
+	left: 4px;
+	bottom: 2px;
+
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 11px;
+	pointer-events: none;
+	color: var(--text-error);
+	margin: 0;
+}
+
+/* OTHER */
+.tableForm__addRow {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 16px;
+	margin-top: 33px;
+}
+
+.tableForm__hr {
+	margin: 16px 0 0 0;
+	border: 0.5px solid #e6e9f4;
+}
+
+.tableForm__remove {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	width: 60px;
+	height: 40px;
+	cursor: pointer;
+	color: #f45a6d;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+.tableForm__btn {
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+	padding: 11px 9px;
+	position: relative;
+	border: 1px solid transparent;
+	background-color: transparent;
+
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #1e5eff;
+	cursor: pointer;
+}
+
+.tableForm__btn:disabled {
+	color: #979797;
+	cursor: not-allowed;
+}

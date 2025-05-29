@@ -1,0 +1,134 @@
+.btn {
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-decoration: none;
+	color: var(--text-white);
+	outline: none;
+	cursor: pointer;
+
+	display: grid;
+	grid-template-areas: "stack";
+
+	padding: 8px 18px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	background-color: var(--btn-accent);
+	transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+	background-color: var(--btn-hover);
+}
+
+.btn:disabled {
+	cursor: not-allowed;
+	background-color: var(--btn-disabled);
+}
+
+.btn--loading:disabled {
+	background-color: var(--btn-accent);
+}
+
+.btn--spinner:disabled {
+	background-color: var(--btn-accent);
+}
+
+.btn:focus-visible {
+	background-color: var(--btn-hover);
+}
+
+.btn--secondary {
+	color: var(--btn-accent);
+	background-color: var(--bg-white);
+	border: 1px solid var(--btn-accent);
+}
+
+.btn--secondary:focus-visible {
+	color: var(--btn-hover);
+	background-color: var(--bg-white);
+	border: 1px solid var(--btn-hover);
+}
+
+.btn--secondary:hover {
+	color: var(--btn-hover);
+	background-color: var(--bg-white);
+	border: 1px solid var(--btn-hover);
+}
+
+.btn--secondary:disabled {
+	color: var(--btn-disabled);
+	background-color: var(--bg-white);
+	border: 1px solid var(--btn-disabled);
+}
+
+.btn--secondary.btn--spinner:disabled {
+	color: var(--btn-accent);
+}
+
+.btn__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	grid-area: stack;
+}
+
+.btn--loading > .btn__content {
+	visibility: hidden;
+}
+
+.btn__loader {
+	visibility: hidden;
+	grid-area: stack;
+
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn--loading > .btn__loader {
+	visibility: visible;
+}
+
+.btn__dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 3px;
+	border-radius: 100%;
+	background-color: #ffffff;
+	animation-fill-mode: both;
+}
+
+.btn--secondary .btn__dot {
+	background-color: var(--btn-accent);
+}
+
+.btn__dot:nth-child(1) {
+	animation: loaderScale 1.44s -0.24s infinite cubic-bezier(0, 0, 0.4, 1);
+}
+.btn__dot:nth-child(2) {
+	animation: loaderScale 1.44s -0.12s infinite cubic-bezier(0, 0, 0.4, 1);
+}
+.btn__dot:nth-child(3) {
+	animation: loaderScale 1.44s 0s infinite cubic-bezier(0, 0, 0.4, 1);
+}
+
+@keyframes loaderScale {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	24% {
+		transform: scale(0.72);
+		opacity: 0.3;
+	}
+	48% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

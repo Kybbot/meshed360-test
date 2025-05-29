@@ -1,0 +1,101 @@
+.customCheckbox {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	position: relative;
+}
+
+.customCheckbox--error > .customCheckbox__field + svg {
+	outline: 1px solid var(--border-error);
+}
+
+.customCheckbox__field {
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	font-size: 100%;
+	opacity: 0.00001;
+	z-index: 2;
+	transform: translateY(-50%);
+}
+
+.customCheckbox__field--right {
+	right: 0;
+}
+
+.customCheckbox__field:disabled {
+	cursor: not-allowed;
+}
+
+.customCheckbox__svg {
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+}
+
+.customCheckbox__svg {
+	width: 20px;
+	height: 20px;
+	transition: all 0.1s linear;
+	border: 1px solid transparent;
+}
+
+.customCheckbox__field:hover + .customCheckbox__svg > rect {
+	stroke: #a1a7c4;
+}
+
+.customCheckbox__field:disabled:hover + .customCheckbox__svg > rect {
+	stroke: #d7dbec;
+}
+
+.customCheckbox__svg * {
+	transition: all 0.1s linear;
+}
+
+.customCheckbox__svg--second {
+	left: 0;
+	top: 50%;
+	opacity: 0;
+	position: absolute;
+	transform: translateY(-50%);
+}
+
+.customCheckbox__svg--right {
+	right: 0;
+	left: initial;
+}
+
+.customCheckbox__field:checked ~ .customCheckbox__svg--second {
+	opacity: 1;
+}
+
+.customCheckbox__field:focus + svg {
+	border-radius: 4px;
+	outline: 1px solid var(--border-focus);
+}
+
+.customCheckbox__field:focus:not(:focus-visible) + svg {
+	outline: none;
+}
+
+.customCheckbox__label {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #131523;
+	cursor: pointer;
+}
+
+.customCheckbox__label--template {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+	color: #5a607f;
+}
+
+.customCheckbox__field:disabled ~ .customCheckbox__label {
+	cursor: not-allowed;
+}

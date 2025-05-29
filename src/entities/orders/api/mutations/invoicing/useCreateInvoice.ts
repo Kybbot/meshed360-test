@@ -1,0 +1,72 @@
+import { AxiosError } from "axios";
+import toast from "react-hot-toast";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+import { showError } from "@/utils/showError.ts";
+import { axiosInstance } from "@/utils/axios.ts";
+
+import { ApiError, ApiResult } from "@/@types/api.ts";
+import {
+	ExtendedSalesOrder,
+	GetOrderByIdResponseType,
+	InvoiceType,
+	UpdateInvoiceType,
+} from "@/@types/salesOrders/api.ts";
+
+export const useCreateInvoice = (onSuccess: (invoiceId: string) => void) => {
+	const queryClient = useQueryClient();
+
+	return useMutation<
+		ApiResult<{ salesOrderInvoice: InvoiceType; salesOrder: ExtendedSalesOrder }>,
+		AxiosError<ApiError>,
+		{
+			organisationId: string;
+			orderId: string;
+			body: UpdateInvoiceType;
+		}
+	>({
+		mutationKey: ["create-invoice"],
+		mutationFn: async ({ organisationId, orderId, body }) => {
+			const { data } = await axiosInstance.post<
+				ApiResult<{ salesOrderInvoice: InvoiceType; salesOrder: ExtendedSalesOrder }>
+			>(`/api/sales-orders/${organisationId}/orders/${orderId}/invoices`, JSON.stringify(body));
+
+			return data;
+		},
+		onSuccess: async (data, { organisationId, orderId }) => {
+			await queryClient.invalidateQueries({
+				queryKey: ["get-invoices-by-id", organisationId, orderId],
+				exact: true,
+			});
+
+			const existing = queryClient.getQueryData<ApiResult<GetOrderByIdResponseType>>([
+				"get-order-by-id",
+				organisationId,
+				orderId,
+			]);
+
+			if (existing) {
+				queryClient.setQueryData<ApiResult<GetOrderByIdResponseType>>(
+					["get-order-by-id", organisationId, orderId],
+					{
+						...existing,
+						data: {
+							...existing.data,
+							salesOrder: {
+								...existing.data.salesOrder,
+								status: data.data.salesOrder.status,
+							},
+						},
+					},
+				);
+			}
+
+			onSuccess(data.data.salesOrderInvoice.id);
+
+			toast.success("New Invoice was successfully added");
+		},
+		onError(error) {
+			showError(error);
+		},
+	});
+};

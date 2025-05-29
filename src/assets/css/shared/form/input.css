@@ -1,0 +1,114 @@
+.customInput {
+	position: relative;
+}
+
+.customInput__btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #7e84a3;
+	border-style: none;
+	border-radius: 4px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.customInput__field {
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--text-input);
+
+	width: 100%;
+	outline: none;
+	padding: 12px 16px;
+	border-radius: 4px;
+	transition: border 120ms ease-in;
+	background-color: var(--bg-white);
+	border: 1px solid var(--border-main);
+}
+
+.customInput__field:-webkit-autofill,
+.customInput__field:-webkit-autofill:hover,
+.customInput__field:-webkit-autofill:focus,
+.customInput__field:-webkit-autofill:active {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: var(--text-input);
+}
+
+.customInput__field:disabled {
+	cursor: not-allowed;
+}
+
+.customInput__field:focus {
+	outline: none;
+}
+
+.customInput__field:focus-visible {
+	border: 1px solid var(--border-focus);
+}
+
+.customInput__field--small {
+	padding: 8px 12px;
+}
+
+.customInput__field--upperCase {
+	text-transform: uppercase;
+}
+
+.customInput--error > .customInput__field {
+	color: var(--text-error);
+	border: 1px solid var(--border-error);
+}
+
+.customInput__label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(16px, 50%);
+
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--text-label);
+
+	background-color: var(--bg-white);
+	transition: all 120ms ease-in;
+}
+
+.customInput--error > .customInput__label {
+	color: var(--text-error);
+}
+
+.customInput__field:disabled + .customInput__label {
+	cursor: not-allowed;
+}
+
+.customInput__field:focus + .customInput__label {
+	padding: 0 6px;
+	font-size: 12px;
+	transform: translate(10px, -12px);
+}
+
+.customInput__field:not(:placeholder-shown) + .customInput__label {
+	padding: 0 6px;
+	font-size: 12px;
+	transform: translate(10px, -12px);
+}
+
+.customInput__error {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+	color: var(--text-error);
+
+	margin: 0;
+}

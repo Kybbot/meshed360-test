@@ -1,0 +1,34 @@
+@import "./body.css";
+
+@import "./main.css";
+
+@import "./link.css";
+@import "./tabs.css";
+@import "./table.css";
+@import "./toast.css";
+@import "./table.css";
+@import "./loader.css";
+@import "./dialog.css";
+@import "./button.css";
+@import "./popover.css";
+@import "./spinner.css";
+@import "./dropDown.css";
+@import "./tableForm.css";
+@import "./customModal.css";
+@import "./customSelect.css";
+@import "./errorMessage.css";
+@import "./simpleSelect.css";
+@import "./customDayPicker.css";
+@import "./customTableSelect.css";
+
+@import "./form/form.css";
+@import "./form/input.css";
+@import "./form/textarea.css";
+@import "./form/checkbox.css";
+@import "./form/switch.css";
+@import "./form/formTable.css";
+@import "./form/tableInput.css";
+@import "./form/formSelect.css";
+@import "./form/tableSelect.css";
+@import "./form/tableSelect2.css";
+@import "./form/tableDayPicker.css";

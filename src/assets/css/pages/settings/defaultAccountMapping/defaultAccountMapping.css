@@ -1,0 +1,17 @@
+.dam__form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 23px;
+}
+
+.dam__form-toggle {
+	grid-column: 1 / 4;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	& svg {
+		cursor: pointer;
+	}
+}

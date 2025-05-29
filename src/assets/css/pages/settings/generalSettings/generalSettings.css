@@ -1,0 +1,75 @@
+.generalSettings__cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+
+.generalSettings__card {
+	border-radius: 6px;
+	padding: 16px 24px 24px 24px;
+	background-color: var(--bg-white);
+	box-shadow: 0px 1px 4px 0px #15223214;
+}
+
+.generalSettings__card:nth-child(2),
+.generalSettings__card:nth-child(3) {
+	grid-row: span 2;
+}
+
+.generalSettings__header {
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e6e9f4;
+}
+
+.generalSettings__title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #131523;
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 0;
+}
+
+.generalSettings__content {
+	display: grid;
+	gap: 33px;
+}
+
+.generalSettings__link {
+	display: block;
+	color: #131523;
+	text-decoration: none;
+}
+
+.generalSettings__subTitle {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+}
+
+.generalSettings__subTitle > svg {
+	color: #7e84a3;
+}
+
+.generalSettings__text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	color: #5a607f;
+	margin: 0;
+}
+
+.profileForm__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 32px 23px;
+}
