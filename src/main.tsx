@@ -1,6 +1,7 @@
 import * as Sentry from "@sentry/react";
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+import { matchRoutes, useLocation, useNavigationType, createRoutesFromChildren } from "react-router";
 
 Sentry.init({
 	sendDefaultPii: true,
@@ -13,7 +14,15 @@ Sentry.init({
 	],
 	dsn: import.meta.env.VITE_SENTRY_DSN_FE,
 	environment: import.meta.env.VITE_STAGE,
-	integrations: [Sentry.browserTracingIntegration()],
+	integrations: [
+		Sentry.reactRouterV7BrowserTracingIntegration({
+			useLocation,
+			matchRoutes,
+			useNavigationType,
+			useEffect: useEffect,
+			createRoutesFromChildren,
+		}),
+	],
 	release: `meshed-test-${import.meta.env.VITE_STAGE}`,
 });
 

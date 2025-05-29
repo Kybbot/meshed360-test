@@ -11,10 +11,19 @@ interface ErrorBoundaryProps {
 }
 
 export class ErrorBoundary extends Component<ErrorBoundaryProps> {
-	state = { hasError: false };
+	state = { chunkError: false, defaultError: false };
 
-	static getDerivedStateFromError() {
-		return { hasError: true };
+	static getDerivedStateFromError(error: Error) {
+		console.log("!!ERROR!!", error);
+
+		if (
+			error.name === "ChunkLoadError" ||
+			error.message.includes("error loading dynamically imported module") ||
+			error.message.includes("Failed to fetch dynamically imported module")
+		) {
+			return { chunkError: true, defaultError: false };
+		}
+		return { chunkError: false, defaultError: true };
 	}
 
 	componentDidCatch(error: Error, info: ErrorInfo) {
@@ -22,7 +31,22 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps> {
 	}
 
 	render() {
-		if (this.state.hasError) {
+		if (this.state.chunkError) {
+			return (
+				<div className="main__content main__content--error">
+					<Header isError />
+					<div className="main__error">
+						<p style={{ margin: "0 0 20px 0" }}>The site has been updated, please refresh the page!</p>
+						<Button type="button" onClick={() => window.location.reload()}>
+							Refresh page
+						</Button>
+					</div>
+					<Footer />
+				</div>
+			);
+		}
+
+		if (this.state.defaultError) {
 			return (
 				<div className="main__content main__content--error">
 					<Header isError />

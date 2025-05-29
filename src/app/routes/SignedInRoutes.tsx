@@ -1,4 +1,5 @@
 import { FC, lazy, Suspense } from "react";
+import * as Sentry from "@sentry/react";
 import { Route, Routes } from "react-router";
 
 import { MainLayout } from "../lauouts/MainLayout";
@@ -98,9 +99,11 @@ const InventoryMovementDetails = lazy(
 );
 const ProductStockLevel = lazy(() => import("@/pages/Reports/ui/inventoryReports/ProductStockLevel"));
 
+const SentryRoutes = Sentry.withSentryReactRouterV7Routing(Routes);
+
 export const SignedInRoutes: FC = () => {
 	return (
-		<Routes>
+		<SentryRoutes>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Dashboard />} />
 
@@ -509,6 +512,6 @@ export const SignedInRoutes: FC = () => {
 
 				<Route path="*" element={<Dashboard />} />
 			</Route>
-		</Routes>
+		</SentryRoutes>
 	);
 };
