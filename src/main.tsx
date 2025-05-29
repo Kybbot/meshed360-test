@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 
 Sentry.init({
 	sendDefaultPii: true,
+	tracesSampleRate: 1.0,
 	tracePropagationTargets: [
 		"localhost",
 		"https://api.meshed-360.com",
@@ -14,7 +15,6 @@ Sentry.init({
 	environment: import.meta.env.VITE_STAGE,
 	integrations: [Sentry.browserTracingIntegration()],
 	release: `meshed-test-${import.meta.env.VITE_STAGE}`,
-	tracesSampleRate: import.meta.env.VITE_STAGE === "local" ? 0.2 : 1.0,
 });
 
 import "react-day-picker/dist/style.css";
